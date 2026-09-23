@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>历史优选池 - A's decision</title>
+    <link rel="stylesheet" href="./styles.css?v=20260923151016">
+    <script src="./data.js?v=20260923151016"></script>
+    <script src="./app.js?v=20260923151016" defer></script>
+  </head>
+  <body data-page="history">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="A's decision">
+          <span class="brand-mark" aria-hidden="true"><i></i></span>
+          <span>A's decision</span>
+        </a>
+        <div class="top-search" role="search">
+          <span class="search-dot" aria-hidden="true"></span>
+          <input id="globalSearch" type="search" placeholder="搜索代码、名称、异常原因">
+        </div>
+        <div class="top-status">
+          <span id="dataStatus">数据加载中</span>
+        </div>
+      </header>
+
+      <aside class="side-nav" aria-label="主导航">
+        <a href="./index.html" data-nav="dashboard"><span class="nav-icon icon-eyes"></span>总览</a>
+        <a href="./pool.html" data-nav="pool"><span class="nav-icon icon-pool"></span>优选池</a>
+        <a href="./history.html" data-nav="history"><span class="nav-icon icon-book"></span>历史</a>
+        <a href="./anomalies.html" data-nav="anomalies"><span class="nav-icon icon-alert"></span>异常</a>
+        <a href="./agents.html" data-nav="agents"><span class="nav-icon icon-gpt"></span>Agent</a>
+        <a href="./trading.html" data-nav="trading"><span class="nav-icon icon-person"></span>实盘</a>
+        <a href="./close-brief.html" data-nav="close-brief"><span class="nav-icon icon-book"></span>收盘简报</a>
+        <a href="./daily-news.html" data-nav="daily-news"><span class="nav-icon icon-alert"></span>每日新闻</a>
+      </aside>
+
+      <main id="app" class="content" tabindex="-1"></main>
+    </div>
+
+    <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+    <aside id="detailDrawer" class="detail-drawer" aria-live="polite" aria-label="详情"></aside>
+  </body>
+</html>

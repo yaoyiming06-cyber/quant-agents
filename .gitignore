@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+runs/
+data/
+web_dashboard/data.js
+web_dashboard/archive/

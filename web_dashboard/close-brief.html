@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>今日收盘交易简报 - A's decision</title>
+    <link rel="stylesheet" href="./styles.css?v=20260923151016">
+    <script src="./data.js?v=20260923151016"></script>
+    <script>window.CLOSE_BRIEF_DATA = {"title":"今日收盘交易简报","subtitle":"收盘后固化全市场快照评分、优选池排序和当天模拟交易结果；盘前再吸收新闻、龙虎榜、美股夜盘等交易前信息。","summary":{"status":"降级完成","automationStatus":"degraded","postCloseStatus":"降级完成","coverage":"1711/0","remaining":0,"decisionCount":8},"automationRows":[{"key":"midday","label":"中午收盘","status":"ok","statusText":"正常","note":"14:35","finishedAt":"2026-09-23T14:45:30+08:00","reportPath":"runs/intraday_update_report_20260923.json"},{"key":"post_close","label":"下午收盘","status":"degraded","statusText":"降级完成","note":"snapshot_fallback_used","finishedAt":"2026-09-23T16:46:49+08:00","reportPath":"runs/post_close_update_report_20260923.json"},{"key":"preopen","label":"盘前预评","status":"degraded","statusText":"降级完成","note":"新闻延后补抓；盘前报价/主题/机构/隔夜重排已完成","finishedAt":"2026-09-23T09:14:33+08:00","reportPath":"runs/preopen_check_report_20260923.json"}],"actionRows":[{"type":"成交","side":"卖出","code":"002264","name":"新 华 都","status":"已成交","reason":"出池确认","time":"2026-09-23T10:50:08"},{"type":"未买入","side":"观察","code":"002768","name":"国恩股份","status":"已拦截","reason":"等待行情确认 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"603162","name":"海通发展","status":"已拦截","reason":"等待行情确认 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"603533","name":"掌阅科技","status":"已拦截","reason":"等待行情确认 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"601975","name":"招商南油","status":"已拦截","reason":"等待行情确认 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"002396","name":"星网锐捷","status":"已拦截","reason":"等待行情确认 / 主线资金流出 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"002640","name":"跨境通","status":"已拦截","reason":"等待行情确认 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"600121","name":"郑州煤电","status":"已拦截","reason":"等待行情确认 / 重大异常 / 盘中大跌 / 评分未过线","time":""},{"type":"未买入","side":"观察","code":"603679","name":"华体科技","status":"已拦截","reason":"等待行情确认 / 跌停破位 / 评分未过线","time":""}],"decisionRows":[{"rank":1,"code":"603162","name":"海通发展","score":0.7794,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":2,"code":"600103","name":"青山纸业","score":0.7751,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":3,"code":"603466","name":"风语筑","score":0.7706,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":4,"code":"002640","name":"跨境通","score":0.7683,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":5,"code":"600601","name":"方正科技","score":0.7674,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":6,"code":"002396","name":"星网锐捷","score":0.7662,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":7,"code":"603533","name":"掌阅科技","score":0.7613,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"},{"rank":8,"code":"601975","name":"招商南油","score":0.7599,"risk":"风控通过","reason":"量能活跃、趋势质量高、信息面无重大风险、机构/量化痕迹正常、相对强度可跟踪"}]};</script>
+    <script src="./app.js?v=20260923151016" defer></script>
+  </head>
+  <body data-page="close-brief">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="A's decision">
+          <span class="brand-mark" aria-hidden="true"><i></i></span>
+          <span>A's decision</span>
+        </a>
+        <div class="top-search" role="search">
+          <span class="search-dot" aria-hidden="true"></span>
+          <input id="globalSearch" type="search" placeholder="搜索代码、名称、原因">
+        </div>
+        <div class="top-status">
+          <span id="dataStatus">数据加载中</span>
+        </div>
+      </header>
+
+      <aside class="side-nav" aria-label="主导航">
+        <a href="./index.html" data-nav="dashboard"><span class="nav-icon icon-eyes"></span>总览</a>
+        <a href="./pool.html" data-nav="pool"><span class="nav-icon icon-pool"></span>优选池</a>
+        <a href="./history.html" data-nav="history"><span class="nav-icon icon-book"></span>历史</a>
+        <a href="./anomalies.html" data-nav="anomalies"><span class="nav-icon icon-alert"></span>异常</a>
+        <a href="./agents.html" data-nav="agents"><span class="nav-icon icon-gpt"></span>Agent</a>
+        <a href="./trading.html" data-nav="trading"><span class="nav-icon icon-person"></span>实盘</a>
+        <a href="./close-brief.html" data-nav="close-brief"><span class="nav-icon icon-book"></span>收盘简报</a>
+        <a href="./daily-news.html" data-nav="daily-news"><span class="nav-icon icon-alert"></span>每日新闻</a>
+      </aside>
+
+      <main id="app" class="content" tabindex="-1">
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">A's decision</p>
+            <h1>今日收盘交易简报</h1>
+            <p class="subtle">今日系统运行、今日操作与原因、收盘优选池排序正在加载。</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+    <aside id="detailDrawer" class="detail-drawer" aria-live="polite" aria-label="详情"></aside>
+  </body>
+</html>
